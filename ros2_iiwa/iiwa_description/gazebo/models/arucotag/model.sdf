@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf version="1.7">
+  <model name="arucotag">
+    <static>false</static>
+    
+    <link name="base_link">
+      <inertial>
+        <mass>0.01</mass> 
+        <inertia>
+          <ixx>0.00000416</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.00000416</iyy>
+          <iyz>0</iyz>
+          <izz>0.00000416</izz>
+        </inertia>
+      </inertial>
+
+     <collision name="box_collision">
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.05</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1000.0</mu>
+              <mu2>1000.0</mu2>
+              <fdir1>0 0 0</fdir1> 
+              <slip1>0.0</slip1>
+              <slip2>0.0</slip2>
+            </ode>
+          </friction>
+          <contact>
+            <ode>
+              <kp>10000000.0</kp> 
+              <kd>1.0</kd> 
+              <minDepth>0.001</minDepth> 
+              <maxVel>0.0</maxVel> 
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+
+      <visual name="cube_visual">
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.05</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.8 0.8 0.8 1</ambient>
+          <diffuse>0.8 0.8 0.8 1</diffuse>
+        </material>
+      </visual>
+
+      <visual name="aruco_visual">
+        <pose>0 0 0.026 0 0 0</pose>
+        <geometry>
+          <box>
+              <size>0.04 0.04 0.001</size> </box>
+        </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <pbr>
+            <metal>
+              <albedo_map>model://arucotag/aruco-201.png</albedo_map>
+            </metal>
+          </pbr>
+        </material>
+      </visual>
+
+    </link>
+  </model>
+</sdf>

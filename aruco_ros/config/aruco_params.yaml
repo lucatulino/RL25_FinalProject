@@ -1,0 +1,12 @@
+aruco_single:
+  ros__parameters:
+    image_topic: "/camera/image_raw"
+    camera_info_topic: "/camera/camera_info"
+    marker_id: 201
+    marker_size: 0.1
+    camera_frame: "static_camera/camera_link/camera_sensor"
+    marker_frame: "aruco_marker_frame"
+    reference_frame: "world"
+    image_is_rectified: true
+    min_marker_size: 0.02
+    detection_mode: "DM_ADAPTIVE"

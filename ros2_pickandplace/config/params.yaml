@@ -1,0 +1,23 @@
+/**:
+  ros__parameters:
+
+    control:
+      max_vel_joint: 1.5
+      max_acc_joint: 2.5
+      kp_joint: 3.0
+      kp_cartesian: 3.0
+      ko_cartesian: 0.5
+      null_space_gain: 10.0
+    
+    logic:
+      drop_height_offset: 0.18  
+      tool_offset: 0.15       
+      search_amplitude: 1.8    
+
+turtlebot_patrol:
+  ros__parameters:
+    patrol:
+      max_linear_vel: 0.22
+      scan_rotation_speed: 0.35
+      visual_servo_kp: 0.8
+      timeout_duration: 0.5
